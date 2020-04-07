@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr  7 17:41:07 2020
-
-@author: 문종환
-"""
-
 from bs4 import BeautifulSoup
 import selenium.webdriver as webdriver
 import urllib.parse
@@ -13,16 +6,13 @@ from time import sleep
 import pandas as pd
 
 
-
-
-
 search = input("검색어를 입력하세요: ")
 search = urllib.parse.quote(search)
 url = 'https://www.instagram.com/explore/tags/'+str(search)+'/'
 
 driver = webdriver.Chrome('C:\Projects\chromedriver.exe')
 driver.get(url)
-sleep(5)
+sleep(3)
 
 SCROLL_PAUSE_TIME = 1.0
 reallink = []
